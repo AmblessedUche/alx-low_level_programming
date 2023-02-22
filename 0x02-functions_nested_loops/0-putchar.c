@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
  * main - the main function
  *
@@ -12,8 +13,8 @@ int main(void)
 
 	for (index = 0; index < 8; index++)
 	{
-		putchar(k[index]);
+		_putchar(k[index]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
