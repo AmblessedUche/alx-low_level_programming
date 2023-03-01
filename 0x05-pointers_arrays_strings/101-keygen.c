@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>  
-//this is a program to generate a random password
+/*this is a program to generate a random password*/
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 
     while(counter < passwordLength)
     {
-        //seed random based on time
+        /*seed random based on time*/
         srand(time(NULL));
         randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[random () % 62];    
         printf("%c", randChar);
