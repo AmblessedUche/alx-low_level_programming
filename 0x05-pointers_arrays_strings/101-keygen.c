@@ -1,26 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>  
-/*this is a program to generate a random password*/
-
-int main()
+#include <time.h>
+/*
+ * main: function to randomly generates password
+ * Return: Always 0
+*/
+int main(void)
 {
-    int counter = 0;
-    srand(time(NULL));
-    char randChar;
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
-    int  passwordLength;
+	srand(time(0));
 
-    printf("Type in a password Length \n");
-    scanf("%d", &passwordLength);
+	while (sum < 2772)
 
-    while(counter < passwordLength)
-    {
-        /*seed random based on time*/
-        srand(time(NULL));
-        randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[random () % 62];    
-        printf("%c", randChar);
-        counter++;
-    }
-    return 0;
+	{
+		paasword[index] = 33 + rand() % 94;
+		sum += password[index++];
+	}
+
+	password[index] = '\0';
+
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+			break;
+			}
+		}
+	}
+	printf("%s", password);
+	return (0);
 }
