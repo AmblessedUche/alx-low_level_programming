@@ -1,6 +1,6 @@
 /**
- * main - updating the value of an int pointer
- * Return: always 0
+ * reset_to_98 - sets a ponter value to 98
+ * @n: a pointer whose value should be reset;
 */
 
 void reset_to_98(int *n)
