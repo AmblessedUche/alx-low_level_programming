@@ -1,19 +1,20 @@
-#include <stddef.h>
+#include <stdio.h>
+#include "main.h"
+
 /**
- * _strchr - returns the first occurence of the character c in the string s,
- * or NULL if the character is not found
- * @s: string to check occurence
- * @c: the character to check
- * Return: first occurence of the character c in string s
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)
 {
-	int k = 0;
+	int i;
 
-	for (; s[k] != '\0'; k++)
+	for (i = 0; s[i] >= '\0'; i++)
 	{
-		if (s[k] == c)
-			return (s + k);
+		if (s[i] == c)
+			return (s + i);
 	}
-	return (s + k);
+	return (NULL);
 }
