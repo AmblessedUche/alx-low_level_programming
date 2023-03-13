@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * main - prints it's name
- * @argc - argument count
- * @argv - argument vector
+ * @argc: argument count
+ * @argv: argument vector
  * Return: always 0
  */
 int main(int argc, char *argv[])
